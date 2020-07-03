@@ -72,7 +72,6 @@ class App extends Component {
         clearTimeout(timeOut)
     }
 
-
     changeFromHandler = (e) => {
         this.setState({
             fromCurrency: e.target.value,
@@ -137,7 +136,7 @@ class App extends Component {
 
         }, () => {
             this.fetchData(this.state.address);
-            setTimeout(
+            setTimeout (
                 function () {
                     this.setState({
                         isClearBtnClicked: false
