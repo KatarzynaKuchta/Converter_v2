@@ -8,7 +8,7 @@ Functionalities:
 - displays current rate for the chosen currency,
 - clear button.
 
-Exchange data rates are derived from https://exchangerate-api.com 
+Exchange data rates are derived from https://exchangerate-api.com .
 Icons used in this project come from www.flaticon.com :
 - icons of flags, arrows were made by Freepik,
 - icon of sack was made by Becris,
