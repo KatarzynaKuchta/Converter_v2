@@ -4,7 +4,7 @@ button {
     width: 165px;
     border: none;
     border-radius: 25px;
-    background: #3F51B5;
+    background: $darkViolet;
     color: white;
     font-size: 21px;
     font-weight: 600;
@@ -30,7 +30,6 @@ button:after {
     z-index: 0;
     transform:scale(0);
     transform-origin: center;
-    // opacity:0.5
 }
 
 button:before{
@@ -71,7 +70,6 @@ button::-moz-focus-inner {
         opacity:1;
         transform:scale(0)
     }
-
     100%{
         opacity:0.05;
         transform:scale(1.9)
@@ -93,7 +91,7 @@ button::-moz-focus-inner {
 .rateInfo {
     font-size: 20px;
     @media(min-width:510px){
-        font-size: 22px;
+        font-size: 23px;
     }
     
 }
@@ -101,6 +99,12 @@ button::-moz-focus-inner {
 .rateInfo1{
     font-weight: 500;
     font-size: 22px;
+    @media(min-width:510px){
+        font-size: 24px
+    }
+    @media(min-width:590px){
+        font-size: 23px
+    }
 }
 
 .rateInfo3 {
@@ -109,6 +113,12 @@ button::-moz-focus-inner {
     @media (min-width: 400px) {
         display: inline-block;
         margin-right: 5px;
+    }
+    @media(min-width: 510px){
+        font-size: 23px;
+    }
+    @media(min-width: 590px){
+        font-size: 20px;
     }
 }
 
@@ -125,8 +135,5 @@ button::-moz-focus-inner {
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (mn-width:321px) {
-        @include flexColumn;
-        align-items: center;
-    }
+
 }

@@ -9,7 +9,7 @@ select{
     border:none;
     cursor: pointer;
     color:white;
-    outline-color: #3F51B5;
+    outline-color: $darkViolet;
     @media (min-width:400px){
         font-size: 20px;
     }
@@ -23,7 +23,8 @@ select{
     }
     @media (min-width:510px){
         flex-direction: row;
-        width: 100%;    
+        width: 100%;  
+        justify-content: space-between;  
     }
 }
 
@@ -70,7 +71,6 @@ option{
         width:50px;
         margin-top:0
     }
-  
 }
 
 .reverse:hover {
@@ -83,6 +83,5 @@ option{
     align-items:flex-end;
     justify-content: center;
     cursor: pointer;
-   
 }
 

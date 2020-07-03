@@ -1,45 +1,4 @@
-@font-face {
-    font-family: 'Gorilla'; 
-    src: url(../fonts/gorilla.regular.ttf);
-    
-}
-
-
-@font-face {
-    font-family: 'Impossibilium-brk'; 
-    src: url(../fonts/impossibilium-brk.regular.ttf);
-    
-}
-
-@font-face {
-    font-family: 'Yeseva-one'; 
-    src: url(../fonts/yeseva-one.regular.ttf);
-    
-}
-
-@font-face {
-    font-family: 'Movavi-grotesque'; 
-    src: url(../fonts/movavi-grotesque.black-italic.ttf);
-    
-}
-
-@font-face {
-    font-family: 'Heavy-equipment'; 
-    src: url(../fonts/heavy-equipment.regular.ttf);
-    
-}
-
-
-$border:1px solid #9e9e9e82;
-
-@mixin flexColumn {
-    display: flex;
-    flex-direction: column
-}
-
-%flexColumn {
-    @include flexColumn
-}
+$darkViolet: #3f51b5;
 
 %label {
     font-weight: 500;
@@ -50,4 +9,13 @@ $border:1px solid #9e9e9e82;
         padding: 10px;
         padding-top: 10px;
     }
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column
+}
+
+%flexColumn {
+    @include flexColumn
 }

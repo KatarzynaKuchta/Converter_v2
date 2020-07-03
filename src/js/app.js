@@ -1,8 +1,6 @@
 import React, { Component, createRef } from 'react';
 import ReactDOM from 'react-dom';
 import './../sass/main.scss';
-// import ResizeObserver from 'react-resize-observer';
-// import ResizeObserver from 'resize-observer-polyfill';
 import Exchange2 from '../images/exchange2.svg';
 import Money from '../images/pound-sterling.svg';
 import Sack from '../images/business.svg';
@@ -54,9 +52,6 @@ class App extends Component {
 
     }
 
-
-
-
     componentDidMount() {
         const container = document.querySelector('.mainContainer');
 
@@ -65,14 +60,11 @@ class App extends Component {
 
         // Works on Firefox
         const resizeObserver = new ResizeObserver((entries) => {
-            console.log("Hello World");
             this.handleResize()
         });
 
-        
-        console.log(container);
         resizeObserver.observe(container)
-      
+
         this.fetchData(this.state.address);
     }
 
@@ -163,7 +155,7 @@ class App extends Component {
             const timeOut = setTimeout(() => {
                 this.setState({
                     isResized: true
-                }, () => console.log('Działa'))
+                })
             })
         })
 
@@ -233,15 +225,12 @@ class App extends Component {
         return (
             <div className="mainContainer">
                 <div className="currencyConverterContainer">
-
-
                     <div className="title">
                         <div className={this.state.isResized ? "title title2 animation" : "title title2 nonAnimation"}>Currency Converter
                             <div className={this.state.isResized ? "line" : "nonLine"}></div>
                         </div>
                     </div>
                     <Money className="iconOfMoney"></Money>
-
                     <div className="selectCurrencyPart">
                         <div className="selectContainers">
                             <label htmlFor="options">Base&nbsp;currency</label>
@@ -251,12 +240,10 @@ class App extends Component {
                                     {optionFrom}
                                 </select>
                             </div>
-
                         </div>
                         <div className="reverseContainer">
                             <Exchange2 fill="blue" className="reverse" onClick={this.handleReverse}></Exchange2>
                         </div>
-
                         <div className="selectContainers">
                             <label htmlFor="options">Target&nbsp;currency</label>
                             <div className="selectPlusFlag">
@@ -265,9 +252,7 @@ class App extends Component {
                                     {optionFrom}
                                 </select>
                             </div>
-
                         </div>
-
                     </div>
                     <div className="amountContainer">
                         <div className="amountToConvert">
@@ -285,7 +270,6 @@ class App extends Component {
                                 {result}
                             </div>
                         </div>
-
                     </div>
                     <div className="summingUpPart">
                         <button className={this.state.isClearBtnClicked ? "wave" : "nonWave"} onClick={this.handleClean}>Clear</button>
@@ -294,7 +278,6 @@ class App extends Component {
                             <div className="rateInfo rateInfo3">Rate on {date}-{month < 10 ? `0${month + 1}` : `${month + 1}`}-{year}: </div>
                             <div className="rateInfo rateInfo2">  1 {this.state.fromCurrency} = {currentRate ? currentRate + ' ' + this.state.wantedCurrency : '1 ' + this.state.wantedCurrency} </div>
                         </div>
-
                         {/* <div className="contribution">Icons of flags, arrows made by <i><a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></i> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
                         <div className="contribution">Icon of sack made by <i><a href="https://www.flaticon.com/authors/becris" title="Becris">Becris</a></i> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> 
                         <div className="contribution">Icon of pounds made by <i><a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></i></div> */}
