@@ -1,4 +1,4 @@
-# Currency_Converter_Reactjs_Sass
+# Currency_Converter_React_Sass
 
 Currency converter that enables to convert various currencies basing on the rate updated once every 24 hours. 
 
@@ -8,11 +8,11 @@ Functionalities:
 - displays current rate for the chosen currency,
 - clear button.
 
-Exchange data rates are derived from https://exchangerate-api.com . 
-Icons used in this project come from www.flaticon.com :
+Exchange data rates are derived from https://exchangerate-api.com. 
+Icons used in this project come from www.flaticon.com:
 - icons of flags, arrows were made by Freepik,
 - icon of sack was made by Becris,
 - icon of pounds was made by Smashicons.
 
 
-You can see my website at: https://katarzynakuchta.github.io/Converter_v2/build 
+You can see my website at:  https://katarzynakuchta.github.io/Currency_Converter_React/build.
