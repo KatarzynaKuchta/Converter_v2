@@ -1,0 +1,132 @@
+
+button {
+    margin-bottom: 40px;
+    width: 165px;
+    border: none;
+    border-radius: 25px;
+    background: #3F51B5;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 12px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:after {
+    position: absolute;
+    top:0;
+    width: 75%;
+    height: 100%;
+    content:'';
+    display:block;
+    border-radius: 20px;
+    background:#81d4fa;
+    z-index: 0;
+    transform:scale(0);
+    transform-origin: center;
+    // opacity:0.5
+}
+
+button:before{
+    position: absolute;
+    top: -5px;
+    left: -2px;
+    width: 161px;
+    height: 52px;
+    content: '';
+    display: none;
+    border-radius: 26px;
+    z-index: -1;
+    transform: scale(1.15);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    border: 3px solid #03a9f4;
+}
+
+
+button:hover:before {
+    display: block;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.wave:after {
+    animation: Wave 0.5s ease-out;
+}
+
+.nonWave:after {
+    animation: none;
+}
+
+@keyframes Wave {
+    0%{
+        opacity:1;
+        transform:scale(0)
+    }
+
+    100%{
+        opacity:0.05;
+        transform:scale(1.9)
+    }
+
+}
+
+.rateInfo2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    @media (min-width: 400px) {
+        display:inline-block;
+    }
+    @media(min-width:510px){
+        margin-bottom: 0;
+    }
+}
+
+.rateInfo {
+    font-size: 20px;
+    @media(min-width:510px){
+        font-size: 22px;
+    }
+    
+}
+
+.rateInfo1{
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.rateInfo3 {
+    margin-top: 3px;
+    font-size: 20px;
+    @media (min-width: 400px) {
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+
+.contribution{
+    font-size: 15px;
+}
+
+.contribution a {
+    color:black;
+    text-decoration: none;
+}
+
+.summingUpPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (mn-width:321px) {
+        @include flexColumn;
+        align-items: center;
+    }
+}
